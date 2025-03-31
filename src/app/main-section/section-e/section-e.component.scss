@@ -1,0 +1,385 @@
+section {
+    animation: scrollingAnimation linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%
+}
+
+.section-main {
+    max-width: 90%;
+    padding: 100px 30px;
+    margin: auto;
+    h1 {
+        text-align: center;
+        padding-bottom: 30px;
+        font-size: 40px;
+        color: var(--text-black-color);
+        animation: titleTxt 1.5s ease-out forwards;
+    }
+}
+
+.contact-section-main-container {
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 50px;
+    background-color: #4d4d4d;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    animation: outerContainerDiv .7s ease-out forwards;
+}
+
+.contact-info-container {
+    max-width: 45%;
+}
+
+.contact-info-container h2 {
+    padding-bottom: 30px;
+    font-size: 35px;
+    animation-delay: 1s;
+    animation: titleTxt 1.5s ease-out forwards;
+
+}
+
+.contact-info-div {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    p {
+        line-height: 22px;
+        animation-delay: 1s;
+        animation: titleTxt 1.5s ease-out forwards;
+    }
+}
+
+.info-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.info-div img {
+    width: 2.5rem;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    animation-delay: 1s;
+    animation: imgIconAnima 1.5s ease-out forwards;
+}
+
+.info-div img:hover {
+    transform: scale(1.1);
+    background-color: white
+}
+
+.contact-text {
+    padding-left: 15px;
+}
+
+.contact-form-div {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgb(0 0 0 / 64%));
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    width: 93%;
+    flex-direction: column;
+}
+
+.contact-form-div h2 {
+    text-align: center;
+    padding-bottom: 35px;
+    font-size: 35px;
+    animation: titleTxt 1.5s ease-out forwards;
+
+    span {
+        color: #148500d1;
+    }
+}
+
+.form-info-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    button {
+        padding: 10px 50px;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        position: relative;
+        background: linear-gradient(60deg, rgb(225 0 0 / 80%), rgb(0 0 0 / 80%));
+        color: white;
+        cursor: pointer;
+        animation-delay: 1s;
+        animation: buttonAnimation 1.5s ease-out forwards;
+
+    }
+}
+
+.form-info-text {
+    button:hover {
+        background: linear-gradient(45deg, rgba(49, 49, 49, 0.8), rgba(155, 10, 10, 0.8), );
+        transform: scale(1.1);
+        transition: .3s ease;
+
+    }
+
+    ;
+}
+.field-input{
+
+    min-height: 65px;
+}
+.validation-div{
+    text-align: center;
+    color: #bdb8b8;
+}
+.input-text-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.input-text-div input {
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    width: 85%;
+    animation-delay: 1s;
+    animation: inputTextAreaAnimation 1.5s ease-out forwards;
+}
+
+.input-text-div input:focus {
+    background-color: #b5dfb8;
+}
+
+.text-area-div {
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+
+}
+
+.text-area-div textarea {
+    width: 90%;
+    height: 350px;
+    border-radius: 25px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+    animation-delay: 1s;
+    animation: inputTextAreaAnimation 1.5s ease-out forwards;
+}
+
+//media quary
+@media (max-width:1182px) {
+    .field-input {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:1100px) {
+    .contact-section-main-container {
+        flex-direction: column;
+    }
+
+    .field-input {
+        text-align: center;
+    }
+
+    .contact-info-container {
+        max-width: 100% !important;
+        text-align: center;
+
+    }
+
+    .info-div {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-text {
+        padding: 0;
+    }
+
+    .input-text-div {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width:600px) {
+    .input-text-div {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:450px) {
+    .text-area-div textarea {
+        width: 80%;
+    }
+
+}
+
+@media (max-width:340px) {
+    .title {
+        font-size: 25px !important;
+    }
+
+    .text-area-div textarea {
+        height: 250px !important;
+    }
+}
+
+@media (max-width:290px) {
+
+    .contact-form-div h2 {
+        font-size: 20px;
+    }
+
+    .input-text-div input {
+        width: 65%;
+    }
+
+    .text-area-div textarea {
+        width: 60%;
+    }
+
+    .form-info-text button {
+        padding: 10px 25px;
+    }
+}
+
+
+//key frames 
+
+@keyframes outerContainerDiv {
+    0% {
+        opacity: 0;
+        scale: (.1);
+    }
+
+    100% {
+        opacity: 1;
+        scale: (1);
+    }
+}
+
+@keyframes titleTxt {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) scale(.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes paragraphAnima {
+    0% {
+        scale: (.1);
+    }
+
+    100% {
+
+        scale: (1);
+    }
+}
+
+@keyframes imgIconAnima {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes inputTextAreaAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(200px) scale(.1);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px)scale(.1);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+// animation when scrolling
+
+@keyframes scrollingAnimation {
+    0% {
+        opacity: 0;
+        scale: (.4);
+    }
+
+    100% {
+        opacity: 1;
+        scale: (1);
+    }
+}
+
+// custom-alert
+.custom-alert {
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.5s ease, 
+    opacity 0.5s ease, 
+    visibility 0.5s ease;
+  }
+
+  .custom-alert.show {
+    top: 20px; 
+    opacity: 1;
+    visibility: visible;
+  }
+  .success-icon {
+    margin-right: 10px; 
+    font-size: 20px;
+    color: white;
+  }

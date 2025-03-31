@@ -1,0 +1,88 @@
+<div id="customAlert" class="custom-alert">
+
+  <i class="fas fa-check-circle success-icon"></i>
+  Message has been sent.
+</div>
+
+<section id="contact">
+  <div class="section-main">
+    <h1>Contact</h1>
+    <div class="contact-section-main-container">
+      <div class="contact-info-container">
+        <h2 class="title">Let's Work Together</h2>
+        <div class="contact-info-div">
+          <p class="section-text-container">
+            I'm always open to new projects and collaborations.
+             If you're interested in working together or have any questions,
+              don't hesitate to get in touch!</p>
+          <div class="email-info-div info-div">
+            <img src="assets/images/section-e-img/phone-icon.png" alt="Phone No Icon" />
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p>(+91) 8589858957 </p>
+            </div>
+          </div>
+          <div class="phone-no-info-div info-div">
+            <img src="assets/images/section-e-img/mail-icon.png " alt="Email Icon" />
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>georginjos&#64;gmail.com</p>
+            </div>
+          </div>
+          <div class="address-info-div info-div">
+            <img src="assets/images/section-e-img/location-icon.png" alt="Location Icon" />
+            <div class="contact-text">
+              <h4>Address</h4>
+              <p>Perikilamtharappel House,
+                Kanchiyar P.O
+                Kanchiyar, Idukki,
+                Kerala - 685511</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-div">
+        <h2>Contact <span>Me!</span></h2>
+        <form class="form-info-text" [formGroup]="myForm">
+          <div class="input-text-div">
+
+            <!-- Input Field -->
+
+            <div class="field-input">
+              <input placeholder="Full Name" type="text" id="field1" formControlName="formName" />
+
+              <div class="validation-div" *ngIf="this.myForm?.get('formName')?.invalid && this.myForm?.get('formName')?.touched">
+                <small *ngIf="myForm.get('formName')?.hasError('required')">Please enter the Name.</small>
+              </div>
+            </div>    
+
+            <div class="field-input">
+              <input placeholder="Email ID" type="text" id="field 2" formControlName="formEmailId" />
+
+              <div class="validation-div" *ngIf="this.myForm?.get('formEmailId')?.invalid && this.myForm?.get('formEmailId')?.touched">
+                <small *ngIf="myForm.get('formEmailId')?.hasError('required')">Email ID is required.</small>
+                <small *ngIf="myForm.get('formEmailId')?.hasError('email')">Please enter a valid Email ID.</small>
+              </div>
+            </div>
+
+            <div class="field-input">
+              <input placeholder="Phone Number" type="text" id="field3" formControlName="formPhoneNumber" />
+
+              <div class="validation-div" *ngIf="this.myForm?.get('formPhoneNumber')?.invalid && this.myForm?.get('formPhoneNumber')?.touched">
+                <small *ngIf="myForm.get('formPhoneNumber')?.hasError('required')">Phone Number is required.</small>
+                <small *ngIf="myForm.get('formPhoneNumber')?.hasError('pattern')">Please enter a valid Phone Number.</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-area-div">
+            <textarea placeholder="Note" id="note" formControlName="formNote" rows="4" cols="50"></textarea>
+          </div>
+
+         <!-- button -->
+          <button type="submit" (click)="onSubmit()" >Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
